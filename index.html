@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <input type="text" id="price-input" placeholder="Ingrese el precio de compra ($)" />
+        
+        <!-- Precio recomendado -->
+        <div id="price-recommended" class="price-label">
+            <span>Precio recomendado:</span> 
+            <span id="recommended-output">$0.00</span>
+        </div>
+
+        <!-- Precio máximo -->
+        <div id="price-max" class="price-label">
+            <span>Precio máximo:</span> 
+            <span id="max-output">$0.00</span>
+        </div>
+
+        <div class="buttons-row">
+            <button class="adjust-btn large-btn" data-value="-0.10">-0.10</button>
+            <button class="adjust-btn large-btn" data-value="0.10">+0.10</button>
+        </div>
+        <div class="buttons-row">
+            <button class="adjust-btn small-btn gray-btn" data-value="-0.01">-0.01</button>
+            <button class="adjust-btn small-btn gray-btn" data-value="0.01">+0.01</button>
+        </div>
+        <div class="buttons-row">
+            <button id="clear-btn" class="full-btn">Limpiar</button>
+        </div>
+    </div>
+    <footer>
+        <p>Rony Trespalacios</p>
+    </footer>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

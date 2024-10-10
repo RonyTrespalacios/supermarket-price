@@ -1,0 +1,151 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 90%;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del input */
+#price-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    text-align: center;
+}
+
+#price-input:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+/* Estilo para el precio recomendado y el precio máximo */
+.price-label {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#recommended-output {
+    color: green;
+}
+
+#max-output {
+    color: red;
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.large-btn {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.5em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.small-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    margin: 0 5px;
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gray-btn {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.full-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .large-btn {
+        font-size: 1.2em;
+        padding: 12px;
+    }
+
+    .small-btn {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .price-label {
+        font-size: 1.2em;
+    }
+
+    #price-input {
+        font-size: 1em;
+    }
+}
