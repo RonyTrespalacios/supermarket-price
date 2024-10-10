@@ -24,13 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para actualizar los precios
     function updatePrice() {
         let pEntrada = parseInput(priceInput.value);
+    
+        // Si la entrada es vacía o inválida, mostrar $0.00 para ambos precios
+        if (isNaN(pEntrada) || pEntrada === 0) {
+            recommendedOutput.textContent = '$0.00';
+            maxOutput.textContent = '$0.00';
+            return;
+        }
+    
         let pRecomendado = calculatePrice(pEntrada);
         let pMaximo = parseFloat((pEntrada * 2).toFixed(2)); // Precio máximo es pEntrada * 2
-
+    
         // Actualizamos la salida de precios
         recommendedOutput.textContent = `$${pRecomendado}`;
         maxOutput.textContent = `$${pMaximo}`;
-    }
+    }    
 
     // Event listener para la entrada del usuario
     priceInput.addEventListener('input', updatePrice);
