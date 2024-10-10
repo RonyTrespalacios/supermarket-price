@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let auxStr = aux.toString();
         let decimals = auxStr.split('.')[1] || '00'; // Tomamos los decimales de 'aux'
 
-        // Si el segundo decimal es diferente de 0, truncamos a un decimal
+        // Si el segundo decimal es diferente de 0, truncamos a un decimal usando Math.floor para evitar redondeo
         if (decimals.length === 2 && parseInt(decimals[1]) !== 0) {
-            return parseFloat(aux.toFixed(1));
-        } 
+            return Math.floor(aux * 10) / 10; // Truncamos a 1 decimal
+        }
         // Si el segundo decimal es 0, restamos 0.1 a aux
         else {
             return parseFloat((aux - 0.1).toFixed(2));
